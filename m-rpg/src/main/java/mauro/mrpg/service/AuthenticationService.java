@@ -34,7 +34,7 @@ public class AuthenticationService implements UserDetailsService {
             user.setPassword(request.getPassword());
             return userRepository.save(user);
         } else {
-            throw new RuntimeException("Username taken  .");
+            throw new RuntimeException("Username taken.");
         }
     }
 
