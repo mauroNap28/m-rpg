@@ -32,9 +32,6 @@ public class User implements UserDetails {
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     private UserProfile userProfile;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Game> games;
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;

@@ -5,6 +5,7 @@ import lombok.*;
 import mauro.mrpg.dto.enums.StatsEnum;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,16 +25,6 @@ public class Item {
 
     private String description;
 
-    private String str;
-
-    private String des;
-
-    private String cos;
-
-    private String inte;
-
-    private String sag;
-
-    private String car;
-
+    @ManyToOne
+    private GameCharacter character;
 }

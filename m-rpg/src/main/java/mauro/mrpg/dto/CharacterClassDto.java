@@ -1,20 +1,16 @@
-package mauro.mrpg.model;
+package mauro.mrpg.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.*;
 import mauro.mrpg.dto.enums.ClassesEnum;
 
-@Getter
-@Setter
-@Entity
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CharacterClass {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class CharacterClassDto {
 
     @Enumerated(EnumType.STRING)
     private ClassesEnum characterClass;

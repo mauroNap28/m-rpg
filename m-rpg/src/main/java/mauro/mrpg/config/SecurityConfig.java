@@ -44,7 +44,7 @@ public class SecurityConfig {
                 "/api/auth/**").permitAll()
             .and()
             .authorizeHttpRequests().anyRequest()
-            .authenticated()
+            .permitAll()
             .and()
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

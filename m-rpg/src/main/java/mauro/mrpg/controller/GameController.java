@@ -33,4 +33,14 @@ public class GameController {
         }
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteGameById(@PathVariable("id") Long id) {
+        try {
+            gameService.deleteById(id);
+            return new ResponseEntity<>(("Game with id: " + id + " deleted."), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
