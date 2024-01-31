@@ -16,6 +16,8 @@ public class ItemDto {
 
     private String description;
 
+    private int quantity;
+
     private Long characterId;
 
 }

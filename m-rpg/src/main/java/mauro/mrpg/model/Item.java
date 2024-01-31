@@ -2,10 +2,6 @@ package mauro.mrpg.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import mauro.mrpg.dto.enums.StatsEnum;
-
-import java.util.HashMap;
-import java.util.List;
 
 @Getter
 @Setter
@@ -24,6 +20,8 @@ public class Item {
     private String type;
 
     private String description;
+
+    private int quantity;
 
     @ManyToOne
     private GameCharacter character;

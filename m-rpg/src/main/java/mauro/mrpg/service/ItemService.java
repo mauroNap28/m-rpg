@@ -31,6 +31,7 @@ public class ItemService {
             .name(request.getName())
             .type(request.getType())
             .description(request.getDescription())
+            .quantity(request.getQuantity())
             .character(gameCharacter)
             .build();
     }
@@ -45,6 +46,7 @@ public class ItemService {
         item.setName(request.getName());
         item.setType(request.getType());
         item.setDescription(request.getDescription());
+        item.setQuantity(request.getQuantity());
         return itemRepository.save(item);
     }
 }
